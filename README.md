@@ -1,17 +1,8 @@
 # Description of the devops-capstone-project. 
+Capstone Overview
 In this Capstone project, you will apply many of the technologies and concepts you learned in the preceding courses to build and deliver a fully functional Customer Accounts microservice.
 
-Starting in Module 1, you will begin this capstone journey by developing an Agile plan to build your RESTful microservice. You will create a GitHub repository and Kanban board to manage the project, build a user story template to write well-structured user stories, and populate your Product Backlog with all the stories needed to implement the Customer Accounts microservice. After completing your backlog, you will prepare a sprint plan by setting up sprints, estimating story points, assigning stories to the appropriate sprint, and building your Sprint Backlog. Throughout the Capstone, you will take screenshots and record GitHub URLs as evidence for final submission:
-
-Create seven user stories in your GitHub kanban board, one for each of the following steps of your project:
-Setup the development environment
-Read an account from the service
-Update an account in the service
-Delete an account from the service
-List all accounts in the service
-Containerize your microservice using Docker
-Deploy your Docker image to Kubernetes
-
+Starting in Module 1, you will begin this capstone journey by developing an Agile plan to build your RESTful microservice. You will create a GitHub repository and Kanban board to manage the project, build a user story template to write well-structured user stories, and populate your Product Backlog with all the stories needed to implement the Customer Accounts microservice. After completing your backlog, you will prepare a sprint plan by setting up sprints, estimating story points, assigning stories to the appropriate sprint, and building your Sprint Backlog. Throughout the Capstone, you will take screenshots and record GitHub URLs as evidence for final submission.
 
 In Module 2, you will begin Sprint 1 by configuring your project environment and developing the Customer Accounts microservice using test-driven development (TDD). As you work on each story, you will move it across your Kanban board—from “Backlog” to “In Progress,” then to “Done,” and ultimately to “Closed.”
 You will create a development branch for your sprint work and push changes to GitHub by submitting pull requests. You will write test cases for the read, update, delete, and list functions for your RESTful Flask service and write just enough code to make each test pass. You will run nosetests to ensure all tests pass and use the coverage tool to maintain at least 95% test coverage.
