@@ -1,3 +1,14 @@
+# Description of the devops-capstone-project. 
+Create seven user stories in your GitHub kanban board, one for each of the following steps of your project:
+Setup the development environment
+Read an account from the service
+Update an account in the service
+Delete an account from the service
+List all accounts in the service
+Containerize your microservice using Docker
+Deploy your Docker image to Kubernetes
+
+
 # DevOps Capstone Template
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
