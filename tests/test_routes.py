@@ -167,7 +167,7 @@ class TestAccountService(TestCase):
         updated_account = resp.get_json()
         self.assertEqual(updated_account["name"], "Something Known")
 
-    #check delete account API
+    #check delete account API 
     def test_delete_account(self):
         """It should Delete an Account"""
         account = self._create_accounts(1)[0]
