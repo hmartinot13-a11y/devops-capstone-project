@@ -58,7 +58,7 @@ def create_accounts():
     )
 
 ######################################################################
-# LIST ALL ACCOUNTS
+# LIST ALL ACCOUNTS Story 2
 ######################################################################
 
 @app.route("/accounts", methods=["GET"])
@@ -77,7 +77,7 @@ def list_accounts():
 
 
 ######################################################################
-# READ AN ACCOUNT
+# READ AN ACCOUNT - Story 1
 ######################################################################
 
 @app.route("/accounts/<int:account_id>", methods=["GET"])
@@ -96,7 +96,7 @@ def get_accounts(account_id):
 
 
 ######################################################################
-# UPDATE AN EXISTING ACCOUNT
+# UPDATE AN EXISTING ACCOUNT Story 3
 ######################################################################
 
 @app.route("/accounts/<int:account_id>", methods=["PUT"])
@@ -117,11 +117,22 @@ def update_accounts(account_id):
     return account.serialize(), status.HTTP_200_OK
 
 ######################################################################
-# DELETE AN ACCOUNT
+# DELETE AN ACCOUNT Story 4
 ######################################################################
 
-# ... place you code here to DELETE an account ...
+@app.route("/accounts/<int:account_id>", methods=["DELETE"])
+def delete_accounts(account_id):
+    """
+    Delete an Account 
+    This endpoint will delete an Account based on the account_id that is requested
+    """
+    app.logger.info("Request to delete an Account with id: %s", account_id)
 
+    account = Account.find(account_id)
+    if account:
+        account.delete()
+
+    return "", status.HTTP_204_NO_CONTENT
 
 ######################################################################
 #  U T I L I T Y   F U N C T I O N S
