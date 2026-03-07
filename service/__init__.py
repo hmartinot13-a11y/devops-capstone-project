@@ -5,12 +5,18 @@ This module creates and configures the Flask app and sets up the logging
 and SQL database
 """
 import sys
+from flask_talisman import Talisman
+from flask_cors import CORS
 from flask import Flask
 from service import config
 from service.common import log_handlers
 
 # Create Flask application
 app = Flask(__name__)
+talisman = Talisman(app)
+CORS(app)
+
+app.config.from_object(config)
 app.config.from_object(config)
 
 # Import the routes After the Flask app is created
@@ -18,7 +24,7 @@ app.config.from_object(config)
 from service import routes, models  # noqa: F401 E402
 
 # pylint: disable=wrong-import-position
-from service.common import error_handlers, cli_commands  # noqa: F401 E402
+
 
 # Set up logging for production
 log_handlers.init_logging(app, "gunicorn.error")
