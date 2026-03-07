@@ -14,7 +14,6 @@ from service.common import log_handlers
 app = Flask(__name__)
 talisman = Talisman(app)
 
-# 
 app.config.from_object(config)
 app.config.from_object(config)
 
